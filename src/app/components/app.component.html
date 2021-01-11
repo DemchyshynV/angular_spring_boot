@@ -1,0 +1,11 @@
+<form [formGroup]="form">
+  <label>Id: <input type="number" formControlName="id"></label>
+  <label>Name: <input type="text" formControlName="name"></label>
+  <label>Status: <input type="text" formControlName="status"></label>
+  <button (click)="create(form)">save</button>
+</form>
+<div *ngIf="users">
+  <div *ngFor="let user of users">
+    {{user.id}} -- {{user.name}} -- {{user.status}}
+  </div>
+</div>
